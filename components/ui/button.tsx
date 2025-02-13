@@ -1,16 +1,14 @@
 import React from "react";
-import { ArrowRight } from "lucide-react"; // Icon for right arrow
+import { ArrowRight } from "lucide-react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline";
-  size?: "sm" | "md" | "lg";
   fullWidth?: boolean;
   showIcon?: boolean;
 }
 
 export function Button({
   variant = "primary",
-  size = "md",
   fullWidth = false,
   showIcon = false,
   className = "",
