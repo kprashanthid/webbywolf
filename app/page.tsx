@@ -6,11 +6,15 @@ import {
   SectionSix,
   SectionThree,
   SectionTwo,
+  SectionSeven,
+  SectionEighth,
+  SectionNineth,
+  SectionTenth,
 } from "./landingSub";
 
 export default function Home() {
   return (
-    <div className="bg-gray-50 h-full">
+    <div className="bg-white h-full">
       <Navbar />
       <SectionOne />
       <div className="sm:h-20 h-10"></div>
@@ -23,6 +27,15 @@ export default function Home() {
       <SectionFive />
       <div className="sm:h-40 h-11"></div>
       <SectionSix />
+      <div className="sm:h-40 h-11"></div>
+      <SectionSeven />
+      <div className="sm:h-40 h-11"></div>
+      <SectionEighth />
+      <div className="sm:h-44 h-11"></div>
+      <SectionNineth />
+      <div className="sm:h-48 h-16"></div>
+      <SectionTenth />
+      <div className="sm:h-48 h-16"></div>
     </div>
   );
 }

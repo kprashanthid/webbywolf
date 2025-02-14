@@ -1,9 +1,9 @@
 import { Typography } from "@/components/ui/typography";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import BikerImage from ".././assets/images/Graphic-Right.png";
 import { Button } from "@/components/ui/button";
 import { Check, Phone } from "lucide-react";
-import { bikeData, cardData } from "./localdata/locadata";
+import { bikeData, cardData, cardDataScroll } from "./localdata/locadata";
 import BikeCard from "@/components/ui/bikecard";
 import multiplebikes from ".././assets/images/multipleBikes.png";
 import ImageWithDetails from "@/components/ui/image-withdetail";
@@ -24,6 +24,19 @@ import tork from "../assets/images/tork.png";
 import ultra from "../assets/images/Ultraviolette_Logo 1.png";
 import DetailCard from "@/components/ui/details-card";
 import piano from "../assets/images/piano.png";
+import play from "../assets/images/Playstore.png";
+import singlebike from "../assets/images/singlebike.png";
+import fourBikes from "../assets/images/fourbikes.png";
+import bikesunrise from "../assets/images/3bikesunrise.png";
+import halfthree from "../assets/images/threebikehalf.png";
+import half from "../assets/images/half.png";
+import multiple from "../assets/images/multiplebike.png";
+import twobike from "../assets/images/twobikers.png";
+import threebikes from "../assets/images/3bikes.png";
+import twomotorcycle from "../assets/images/teomotorcycle.png";
+import UserCard from "@/components/ui/usercard";
+import arrowright from "../assets/images/buttonarrowright.png";
+import arrowleft from "../assets/images/Buttonarrowleft.png";
 
 export const SectionOne = () => {
   return (
@@ -120,13 +133,15 @@ export const SectionTwo = () => {
           <div className="flex flex-row gap-5 pl-10">
             <Button
               showIcon
-              className="sm:w-44 sm:h-12 w-16 h-5 rounded-md bg-customBlue text-white text-[8px] sm:text-[15px] font-semibold"
+              className="sm:w-44 sm:h-12 w-20 h-5 rounded-md bg-customBlue text-white text-[8px] sm:text-[15px] font-semibold"
             >
               Loerum Ipsum
             </Button>
-            <div className="flex flex-row items-center space-x-2 text-customBlue gap-2">
-              <Phone className="text-customBlue h-6 w-6" />
-              <span className="text-[16px] font-semibold">123456789</span>
+            <div className="flex flex-row items-center text-customBlue sm:gap-3 gap-1">
+              <Phone className="text-customBlue sm:h-6 sm:w-6 h-2 w-2" />
+              <span className="sm:text-[16px] text-[6px] font-semibold">
+                123456789
+              </span>
             </div>
           </div>
 
@@ -371,10 +386,272 @@ export const SectionSix = () => {
       </div>
       {/* bottom div */}
       <div className="sm:h-40 h-11"></div>
-      {/* <div>
-        <Typography variant="heading">REQUEST A QUOTE</Typography>
-        <form></form>
-      </div> */}
+      <div className="sm:px-44 px-14">
+        <Typography variant="heading" className="text-center">
+          REQUEST A QUOTE
+        </Typography>
+        <form className="sm:mt-32 mt-10">
+          <div className="grid grid-cols-2 sm:gap-5 gap-2">
+            <div className="flex flex-col sm:gap-5 gap-1.5">
+              <span className="sm:text-sm text-[5px] leading-4">Name</span>
+              <input
+                type="text"
+                className="bg-[#F4F4F4] border-[0.5px] w-full sm:-mt-0 -mt-1 hover:bg-[#9F9F9F] sm:h-12 h-4 rounded-sm"
+              />
+            </div>
+            <div className="flex flex-col sm:gap-5 gap-1.5">
+              <span className="sm:text-sm text-[5px]  leading-4">E-mail</span>
+              <input
+                type="email"
+                className="bg-[#F4F4F4] border-[0.5px] w-full sm:-mt-0 -mt-1 hover:bg-[#9F9F9F] sm:h-12 h-4 rounded-sm"
+              />
+            </div>
+            <div className="flex flex-col sm:gap-5 gap-1">
+              <span className="sm:text-sm text-[5px]  leading-4">
+                Phone Number
+              </span>
+              <input
+                type="text"
+                className="bg-[#F4F4F4] border-[0.5px] w-full sm:-mt-0 -mt-1 hover:bg-[#9F9F9F] sm:h-12 h-4 rounded-sm"
+              />
+            </div>
+            <div className="flex flex-col sm:gap-5 gap-1.5">
+              <span className="sm:text-sm text-[5px] leading-4">
+                Time Frame*
+              </span>
+              <input
+                type="text"
+                className="bg-[#F4F4F4] border-[0.5px] w-full sm:-mt-0 -mt-1 hover:bg-[#9F9F9F] sm:h-12 h-4 rounded-sm"
+              />
+            </div>
+            <div className="flex flex-col sm:gap-5 gap-1.5">
+              <span className="sm:text-sm text-[5px] leading-4">Size</span>
+              <input
+                type="text"
+                className="bg-[#F4F4F4] border-[0.5px] w-full sm:-mt-0 -mt-1 hover:bg-[#9F9F9F] sm:h-12 h-4 rounded-sm"
+              />
+            </div>
+            <div className="flex flex-col sm:gap-5 gap-1.5">
+              <span className="sm:text-sm text-[5px] leading-4">Quantity</span>
+              <input
+                type="text"
+                className="bg-[#F4F4F4] border-[0.5px] w-full sm:-mt-0 -mt-1 hover:bg-[#9F9F9F] sm:h-12 h-4 rounded-sm"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col sm:gap-5 gap-1.5 sm:mt-5 mt-1.5">
+            <span className="sm:text-sm text-[5px] leading-4">
+              Please Describe Your Project
+            </span>
+            <textarea className="sm:h-[229px] h-[75px]  bg-[#F4F4F4] hover:bg-[#9F9F9F]" />
+          </div>
+        </form>
+      </div>
+      <div className="flex flex-col sm:gap-10 gap-3.5 items-center sm:mt-10">
+        <span className="sm:text-[18px] text-[6px] leading-[60px]">
+          By submitting this form you agree to our{" "}
+          <span className="border-b-[1px] border-black">Terms of Service</span>
+            and 
+          <span className="border-b-[1px] border-black">Privacy Policy.</span> 
+        </span>
+        <Button
+          showIcon
+          className="sm:h-12 sm:w-44 w-18 h-5 px-2 rounded-md bg-customBlue text-white text-[6px] sm:text-[15px] sm:font-semibold"
+        >
+          Loerum Ipsum
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export const SectionSeven = () => {
+  return <Image src={play} alt="loading" />;
+};
+
+export const SectionEighth = () => {
+  return (
+    <div className="w-full flex flex-row sm:px-20 px-5 sm:gap-9 gap-3 bg-[#F1F5F9] sm:pt-20 pt-5">
+      <div className="w-1/2">
+        <div>
+          <div className="flex flex-row ">
+            <div className="flex flex-col">
+              <p className=" sm:text-[24px] text-[12px] font-semibold text-[#475569] sm:leading-8">
+                NO LIMITS
+              </p>
+              <p className="sm:mt-4 mt-1 font-bold sm:text-[42px] text-[#0F172A]  text-[16px] sm:leading-[50px] leading-5">
+                Lorem ipsum dolor sit amet
+              </p>
+              <p className="sm:mt-9 mt-3 sm:text-[22px] text-[7px] text-[#0F172A] font-regular sm:leading-9">
+                Lorem ipsum dolor sit amet consectetur. Nisl faucibus vitae
+                porttitor pharetra tempor quis arcu. Ipsum nullam.
+              </p>
+              <Button
+                showIcon
+                className="sm:h-12 sm:mt-9 mt-3 sm:w-44 w-16 h-5 px-2 rounded-md bg-customBlue text-white text-[5px] sm:text-[15px] sm:font-semibold"
+              >
+                Loerum Ipsum
+              </Button>
+            </div>
+            <Image
+              src={threebikes}
+              alt="loading"
+              className="sm:h-[240px] h-[80px] sm:w-32 w-12 sm:mt-[195px] mt-[75px]"
+            />
+          </div>
+          <div className="flex flex-row justify-between items-end sm:mt-9 mt-5">
+            <Image src={twobike} alt="loading" className="sm:w-32 w-12" />
+            <Image
+              src={multiple}
+              alt="loading"
+              className=" w-[120px] sm:w-[460px]"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col sm:gap-8 gap-3 max:w-1/2 w-1/2">
+        <div className="flex flex-row sm:gap-8 gap-3 items-end">
+          <Image src={singlebike} alt="loading" className="sm:h-52 h-16" />
+          <Image
+            src={fourBikes}
+            alt="loading"
+            className="sm:h-64 h-20  w-[100px] sm:w-full"
+          />
+        </div>
+        <Image
+          src={bikesunrise}
+          alt="loading"
+          className="sm:h-[300px] h-[100px] "
+        />
+        <div className="flex flex-row sm:gap-8 gap-3 items-end">
+          <Image
+            src={halfthree}
+            alt="loading"
+            className="sm:h-20 h-7 sm:w-full w-12"
+          />
+          <Image
+            src={half}
+            alt="loading"
+            className="sm:h-20 h-7 w-[110px] sm:w-[460px]"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const SectionNineth = () => {
+  return (
+    <div className="w-full  relative  sm:pt-16 pt-5 sm:pr-20 pr-6 bg-[#F8F8F8] ">
+      <div className="sm:ml-20 ml-5 flex flex-row jus">
+        <div className="w-1/2">
+          <Image
+            src={twomotorcycle}
+            alt="loading"
+            className="absolute sm:h-[550px] h-[160px] w-[160px] sm:w-[550px] sm:-mt-24 -mt-9 sm:-ml-20 -ml-5"
+          />
+        </div>
+
+        <div className="flex flex-col w-1/2">
+          <p className=" sm:text-[24px] text-[12px] font-semibold text-customBlue sm:leading-8">
+            Lorem ipsum
+          </p>
+          <p className="sm:mt-4 mt-1 font-bold sm:text-[42px] text-[#0F172A]  text-[16px] sm:leading-[50px] leading-5">
+            <span className="text-customBlue"> Lorem </span>ipsum dolor sit{" "}
+            <br /> amet consectetur. Enim
+            <br /> donec.
+          </p>
+          <p className="sm:mt-4 mt-1 sm:text-[18px] text-[5px] text-[#0F172A] font-regular sm:leading-9">
+            Lorem ipsum dolor sit amet consectetur. Vel pellentesque odio enim{" "}
+            <br />
+            amet non.
+          </p>
+          <div className="grid grid-cols-2 sm:gap-4 gap-1 sm:mt-12 mt-4">
+            <span className="sm:text-xl text-[7px] font-semibold sm:leading-6 leading-2">
+              Lorem Ipsum
+            </span>
+            <span className="sm:text-xl text-[7px] font-semibold sm:leading-6 leading-2">
+              Lorem Ipsum
+            </span>
+            <span className="sm:text-xl text-[7px] font-semibold sm:leading-6 leading-2">
+              Lorem Ipsum
+            </span>
+            <span className="sm:text-xl text-[7px] font-semibold sm:leading-6 leading-2">
+              Lorem Ipsum
+            </span>
+            <span className="sm:text-xl text-[7px] font-semibold sm:leading-6 leading-2">
+              Lorem Ipsum
+            </span>
+            <span className="sm:text-xl text-[7px] font-semibold sm:leading-6 leading-2">
+              Lorem Ipsum
+            </span>
+          </div>
+          <Button
+            showIcon
+            className="sm:h-12 sm:mb-16 mb-6 sm:mt-9 mt-3 sm:w-44 w-16 h-5 px-2 rounded-md bg-customBlue text-white text-[5px] sm:text-[15px] sm:font-semibold"
+          >
+            Loerum Ipsum
+          </Button>
+        </div>
+      </div>
+      <div className="sm:pr-16 pr-6">
+        <div className="sm:h-5 h-2 bg-gradient-to-r from-[#043898] via-[#079902] to-[#170041] w-full sm:mt-20 mt-5"></div>
+      </div>
+    </div>
+  );
+};
+
+export const SectionTenth = () => {
+  return (
+    <div className="bg-[#155ADA] sm:px-20 px-5 sm:py-20 py-5">
+      <div className="flex flex-row items-center justify-between sm:mb:20 mb-5">
+        <div className="flex flex-col w-[65%]">
+          <p className=" sm:text-[24px] text-[12px] font-semibold text-white sm:leading-8">
+            NO LIMITS
+          </p>
+          <p className="sm:mt-4 mt-1 font-bold sm:text-[42px] text-white  text-[16px] sm:leading-[50px] leading-5">
+            Lorem ipsum dolor sit amet
+          </p>
+          <p className="sm:mt-9 mt-3 sm:text-[22px] text-[7px] text-white font-regular sm:leading-9">
+            Lorem ipsum dolor sit amet consectetur. Nisl faucibus vitae
+            porttitor pharetra tempor quis arcu. Ipsum nullam.
+          </p>
+        </div>
+
+        <Button
+          showIcon
+          className="sm:h-12  sm:w-44 w-16 h-5 text-[#222222] px-2 rounded-md bg-white text-[5px] sm:text-[15px] sm:font-semibold"
+        >
+          Loerum Ipsum
+        </Button>
+      </div>
+      <div>
+        <div className="flex overflow-x-auto space-x-4 p-4">
+          {cardDataScroll.map((data: any) => {
+            return (
+              <UserCard
+                key={data.name}
+                text={data.textData}
+                profileImage={data.profilePic}
+                icon={data.icon}
+                name={data.name}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className="flex flex-row sm:mt-20 mt-5">
+        <Image
+          src={arrowright}
+          alt="loading"
+          className="sm:h-12 sm:w-12 h-6 w-6"
+        />
+        <Image
+          src={arrowleft}
+          alt="loading"
+          className="sm:h-12 sm:w-12 h-6 w-6"
+        />
+      </div>
     </div>
   );
 };
