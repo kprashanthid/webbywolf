@@ -627,7 +627,7 @@ export const SectionTenth = () => {
       </div>
       <div>
         <div className="flex overflow-x-auto space-x-4 p-4">
-          {cardDataScroll.map((data: any) => {
+          {cardDataScroll.map((data) => {
             return (
               <UserCard
                 key={data.name}
