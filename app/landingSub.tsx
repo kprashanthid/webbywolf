@@ -607,7 +607,7 @@ export const SectionTenth = () => {
       <div className="flex flex-row items-center justify-between sm:mb:20 mb-5 sm:px-0 px-5">
         <div className="flex flex-col w-[65%]">
           <p className=" sm:text-[24px] text-[12px] font-semibold text-white sm:leading-8">
-            NO LIMITS
+            Join other Sun harvesters
           </p>
           <p className="sm:mt-4 mt-1 font-bold sm:text-[42px] text-white  text-[16px] sm:leading-[50px] leading-5">
             Lorem ipsum dolor sit amet
