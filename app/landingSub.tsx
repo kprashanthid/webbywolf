@@ -1,5 +1,5 @@
 import { Typography } from "@/components/ui/typography";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import BikerImage from ".././assets/images/Graphic-Right.png";
 import { Button } from "@/components/ui/button";
 import { Check, Phone } from "lucide-react";

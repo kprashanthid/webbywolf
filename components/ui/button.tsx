@@ -3,13 +3,12 @@ import { ArrowRight } from "lucide-react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline";
-  fullWidth?: boolean;
   showIcon?: boolean;
 }
 
 export function Button({
   variant = "primary",
-  fullWidth = false,
+
   showIcon = false,
   className = "",
   children,
