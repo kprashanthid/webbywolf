@@ -603,8 +603,8 @@ export const SectionNineth = () => {
 
 export const SectionTenth = () => {
   return (
-    <div className="bg-[#155ADA] sm:px-20 px-5 sm:py-20 py-5">
-      <div className="flex flex-row items-center justify-between sm:mb:20 mb-5">
+    <div className="bg-[#155ADA] sm:px-20 px-0 sm:py-20 py-5">
+      <div className="flex flex-row items-center justify-between sm:mb:20 mb-5 sm:px-0 px-5">
         <div className="flex flex-col w-[65%]">
           <p className=" sm:text-[24px] text-[12px] font-semibold text-white sm:leading-8">
             NO LIMITS
@@ -620,13 +620,13 @@ export const SectionTenth = () => {
 
         <Button
           showIcon
-          className="sm:h-12  sm:w-44 w-16 h-5 text-[#222222] px-2 rounded-md bg-white text-[5px] sm:text-[15px] sm:font-semibold"
+          className="sm:h-12  sm:w-44 w-16 h-5 text-[#211c1c] px-2 rounded-md bg-white text-[5px] sm:text-[15px] sm:font-semibold"
         >
           Loerum Ipsum
         </Button>
       </div>
       <div>
-        <div className="flex overflow-x-auto space-x-4 p-4">
+        <div className="flex overflow-x-auto space-x-4 sm:p-4 p-1">
           {cardDataScroll.map((data) => {
             return (
               <UserCard
@@ -640,7 +640,7 @@ export const SectionTenth = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-row sm:mt-20 mt-5">
+      <div className="flex flex-row sm:mt-20 mt-5 sm:px-0 px-5">
         <Image
           src={arrowright}
           alt="loading"
